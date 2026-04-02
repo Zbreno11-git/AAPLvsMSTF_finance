@@ -33,13 +33,13 @@ df_close = df_melt[df_melt['attribute'] == 'Close']
 fig1 = px.line(df_close, x='Date_idx', y='value', color='Ticker', template='plotly_dark',
                title='CLOSE: the last traded price of each day.')
 #fig1.show()
-fig1.write_html('/Users/luanabreno/Downloads/closing_values_finance.html')
+fig1.write_html('../closing_values_finance.html')
 
     #How the Volume values change during the year:
 df_vol = df_melt[df_melt['attribute'] == 'Volume']
 fig2 = px.bar(df_vol, x='Date_idx', y='value', color='Ticker', template='plotly_dark', barmode='group',
               title='VOLUME: how many shares were traded each day.')
 #fig2.show()
-fig2.write_html('/Users/luanabreno/Downloads/volume_changes_finance.html')
+fig2.write_html('../volume_changes_finance.html')
 
 
